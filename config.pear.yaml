@@ -12,6 +12,9 @@ units:
 points:
   zones:
     matrix:
+      # Fix placement on KiCAD sheet.
+      anchor:
+        shift: [100, -100]
       columns:
         left:
         middle:
@@ -45,3 +48,26 @@ outlines:
     - name: board
     - operation: subtract
       name: keys
+pcbs:
+  darkpear:
+    outlines:
+      main:
+        outline: board
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
