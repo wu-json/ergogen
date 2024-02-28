@@ -19,6 +19,10 @@ points:
       # Fix placement on KiCAD sheet.
       anchor:
         shift: [100, -150]
+      # Choc spacing
+      key:
+        padding: 1ky
+        spread: 1kx
       columns:
         left:
         middle:
