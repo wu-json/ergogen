@@ -1,0 +1,14 @@
+meta:
+  engine: 4.0.5
+  version: 1.0
+  author: darkpear
+points:
+  zones:
+    matrix:
+      columns:
+        left:
+        middle:
+        right:
+      rows:
+        top:
+        bottom:
