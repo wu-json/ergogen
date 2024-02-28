@@ -9,6 +9,10 @@ units:
   # Padding variables
   px: kx + 2
   py: ky + 2
+  # Pear units
+  pp: kx * 5
+  ppx: 1.51pp
+  ppy: 2.24pp
 points:
   zones:
     matrix:
@@ -33,16 +37,82 @@ outlines:
       size: [kx-0.5, ky-0.5]
   board:
     - what: polygon
+      where:
+        ref.aggregate.parts: [matrix_left_top]
+        shift: [-300, 0]
       operation: stack
+      fillet: 1
       points:
         - ref: matrix_left_top
-          shift: [-0.6px, 2py]
-        - ref: matrix_right_top
-          shift: [0.6px, 2py]
-        - ref: matrix_right_bottom
-          shift: [0.6px, -0.6py]
-        - ref: matrix_left_bottom
-          shift: [-0.6px, -0.6py]
+          shift: [0.93pp + ppx, -0.25pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.05pp + ppx, -0.21pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.08pp + ppx, -0.37pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.09pp + ppx, -0.46pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.24pp + ppx, -0.38pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.36pp + ppx, -0.35pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.46pp + ppx, -0.46pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.36pp + ppx, -0.56pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.23pp + ppx, -0.6pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.12pp + ppx, -0.59pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.09pp + ppx, -0.55pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.08pp + ppx, -0.63pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.23pp + ppx, -0.73pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.29pp + ppx, -0.84pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.3pp + ppx, -0.98pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.36pp + ppx, -1.13pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.42pp + ppx, -1.29pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.44pp + ppx, -1.47pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.43pp + ppx, -1.58pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.35pp + ppx, -1.68pp + ppy]
+        - ref: matrix_left_top
+          shift: [1.13pp + ppx, -1.78pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.91pp + ppx, -1.79pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.69pp + ppx, -1.75pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.51pp + ppx, -1.68pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.39pp + ppx, -1.48pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.4pp + ppx, -1.34pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.45pp + ppx, -1.19pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.53pp + ppx, -1.07pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.6pp + ppx, -0.98pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.68pp + ppx, -0.91pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.74pp + ppx, -0.81pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.81pp + ppx, -0.68pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.88pp + ppx, -0.64pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.95pp + ppx, -0.63pp + ppy]
+        - ref: matrix_left_top
+          shift: [0.95pp + ppx, -0.44pp + ppy]
   # Combination preview showing outline and keys.
   combo:
     - name: board
