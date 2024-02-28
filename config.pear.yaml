@@ -12,13 +12,13 @@ units:
   # Pear units
   pp: kx * 5
   ppx: 1.51pp
-  ppy: 2.24pp
+  ppy: 2.24pp + 50
 points:
   zones:
     matrix:
       # Fix placement on KiCAD sheet.
       anchor:
-        shift: [100, -100]
+        shift: [100, -150]
       columns:
         left:
         middle:
@@ -147,5 +147,5 @@ pcbs:
           orientation: "down"
         where:
           ref.aggregate.parts: [matrix_left_top, matrix_right_top]
-          shift: [0, 23]
-          rotate: 0
+          shift: [8, 34]
+          rotate: 270
