@@ -71,3 +71,11 @@ pcbs:
           to: "{{row_net}}"
         adjust:
           shift: [0, -5]
+      promicro:
+        what: promicro
+        params:
+          orientation: "down"
+        where:
+          ref.aggregate.parts: [matrix_left_top, matrix_right_top]
+          shift: [0, 23]
+          rotate: 0
