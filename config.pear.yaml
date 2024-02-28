@@ -1,5 +1,5 @@
 meta:
-  engine: 4.0.5
+  engine: 4.0.2
   version: 1.0
   author: darkpear
 units:
@@ -17,5 +17,31 @@ points:
         middle:
         right:
       rows:
-        top:
         bottom:
+        top:
+outlines:
+  raw:
+    - what: rectangle
+      where: true
+      size: [px, py]
+  keys:
+    - what: rectangle
+      where: true
+      size: [kx-0.5, ky-0.5]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_left_top
+          shift: [-0.6px, 2py]
+        - ref: matrix_right_top
+          shift: [0.6px, 2py]
+        - ref: matrix_right_bottom
+          shift: [0.6px, -0.6py]
+        - ref: matrix_left_bottom
+          shift: [-0.6px, -0.6py]
+  # Combination preview showing outline and keys.
+  combo:
+    - name: board
+    - operation: subtract
+      name: keys
