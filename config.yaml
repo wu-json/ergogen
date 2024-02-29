@@ -134,9 +134,10 @@ outlines:
         shift: [-300, 0]
       operation: stack
       fillet: 1
+      expand: 2
       points:
         - ref: matrix_left_top
-          shift: [(0.93pp + ppx), -0.25pp + ppy]
+          shift: [0.93pp + ppx, -0.25pp + ppy]
         - ref: matrix_left_top
           shift: [1.05pp + ppx, -0.21pp + ppy]
         - ref: matrix_left_top
