@@ -13,7 +13,7 @@
     "build": "rollup -c",
     "test": "mocha -r test/helpers/register test/index.js",
     "coverage": "nyc --reporter=html --reporter=text npm test",
-    "local": "node src/cli.js config.yaml -o ./output"
+    "local": "rm -rf ./output && node src/cli.js config.yaml -o ./output"
   },
   "dependencies": {
     "fs-extra": "^11.1.0",
