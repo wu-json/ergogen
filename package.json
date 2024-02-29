@@ -15,7 +15,7 @@
     "coverage": "nyc --reporter=html --reporter=text npm test",
     "ergo": "rm -rf ./output && node src/cli.js config.yaml -o ./output",
     "ergo:pcb": "npm run ergo && open output/pcbs/darkpear.kicad_pcb",
-    "ergo:case": "npm run ergo && npx @jscad/cli@1 output/cases/bottom.jscad -of stla"
+    "ergo:case": "npm run ergo && for i in output/cases/*.jscad; do npx @jscad/cli@1 \"$i\" -of stla; done"
   },
   "dependencies": {
     "fs-extra": "^11.1.0",
