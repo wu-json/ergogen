@@ -161,3 +161,7 @@ pcbs:
           ref.aggregate.parts: [matrix_left_top, matrix_right_top]
           shift: [8, 34]
           rotate: 270
+      holeTopLeft:
+        what: mountinghole
+        where:
+          ref: [matrix_left_top]
