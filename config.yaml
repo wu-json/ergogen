@@ -177,3 +177,7 @@ pcbs:
         where:
           ref.aggregate.parts: [matrix_left_top, matrix_right_top]
           shift: [10, 72]
+cases:
+  bottom:
+    - name: board
+      extrude: 1
