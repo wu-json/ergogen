@@ -14,7 +14,8 @@
     "test": "mocha -r test/helpers/register test/index.js",
     "coverage": "nyc --reporter=html --reporter=text npm test",
     "ergo": "rm -rf ./output && node src/cli.js config.yaml -o ./output",
-    "ergo:case": "rm -rf ./output && npm run ergo && npx @jscad/cli@1 output/cases/bottom.jscad -of stla"
+    "ego:pcb": "npm run ergo && open output/pcbs/darkpear.kicad_pcb",
+    "ergo:case": "npm run ergo && npx @jscad/cli@1 output/cases/bottom.jscad -of stla"
   },
   "dependencies": {
     "fs-extra": "^11.1.0",
