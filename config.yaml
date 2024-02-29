@@ -13,8 +13,8 @@ units:
   pp: kx * 5
   ppx: 1.51pp
   ppy: 2.24pp + 50
-  # Double pear units
-  dpp: pp + 8
+  # Pear wall scale factor
+  dpp: pp + 3
 points:
   zones:
     matrix:
@@ -262,3 +262,19 @@ cases:
   bottom:
     - name: board
       extrude: 1
+  xlbottom:
+    - name: xlboard
+      extrude: 1
+  _outerwall:
+    - name: xlboard
+      extrude: 4
+  _innerwall:
+    - name: board
+      extrude: 4
+  wall:
+    - what: case
+      name: _outerwall
+      operation: add
+    - what: case
+      name: _innerwall
+      operation: subtract
