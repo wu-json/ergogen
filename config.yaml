@@ -9,13 +9,12 @@ units:
   # Padding variables
   px: kx + 2
   py: ky + 2
-  # Double padding
-  dpx: kx + 8
-  dpy: ky + 8
   # Pear units
   pp: kx * 5
   ppx: 1.51pp
   ppy: 2.24pp + 50
+  # Double pear units
+  dpp: pp + 8
 points:
   zones:
     matrix:
