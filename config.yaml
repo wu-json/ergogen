@@ -15,6 +15,7 @@ units:
   ppy: 2.24pp + 50
   # Pear wall scale factor
   dpp: pp + 3
+  screwsize: 1
 points:
   zones:
     matrix:
@@ -212,6 +213,24 @@ outlines:
     - name: board
     - operation: subtract
       name: keys
+
+  mounting:
+    - what: circle
+      radius: screwsize
+      where:
+        ref: [matrix_left_top]
+        shift: [0.5kx, -0.3ky]
+    - what: circle
+      radius: screwsize
+      where:
+        ref: [matrix_right_bottom]
+        shift: [-0.5kx, -0.3ky]
+    - what: circle
+      radius: screwsize
+      where:
+        ref.aggregate.parts: [matrix_left_top, matrix_right_top]
+        shift: [10, 72]
+
 pcbs:
   darkpear:
     outlines:
@@ -279,9 +298,15 @@ cases:
     - what: case
       name: _innerwall
       operation: subtract
+  _holes:
+    - name: mounting
+      extrude: 4
   case:
     - what: case
       name: xlbottom
+      operation: add
+    - what: case
+      name: _holes
       operation: add
     - what: case
       name: wall
