@@ -25,11 +25,19 @@ points:
         spread: 1kx
       columns:
         left:
+          key:
+            column_net: P21
         middle:
+          key:
+            column_net: P19
         right:
+          key:
+            column_net: P15
       rows:
         bottom:
+          row_net: P2
         top:
+          row_net: P4
 outlines:
   raw:
     - what: rectangle
