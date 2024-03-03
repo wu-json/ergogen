@@ -281,16 +281,16 @@ pcbs:
 cases:
   bottom:
     - name: board
-      extrude: 1
+      extrude: 3
   xlbottom:
     - name: xlboard
-      extrude: 1
+      extrude: 3
   _outerwall:
     - name: xlboard
-      extrude: 4
+      extrude: 7
   _innerwall:
     - name: board
-      extrude: 4
+      extrude: 7
   wall:
     - what: case
       name: _outerwall
